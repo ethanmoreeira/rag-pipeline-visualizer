@@ -1,0 +1,300 @@
+/* QueryScene — página 01 · Consulta */
+
+.q1-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+  min-height: 0;
+}
+
+/* ── Left: query options ── */
+.q1-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.q1-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual query card */
+.q1-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 18px 20px;
+  border: 1.5px solid var(--s-line);
+  border-radius: 13px;
+  background: var(--s-panel);
+  cursor: pointer;
+  transition: border-color .18s, background .18s, box-shadow .18s;
+  text-align: left;
+  color: var(--s-ink);
+  font: inherit;
+  line-height: 1.55;
+}
+
+.q1-card:hover {
+  border-color: #c8a85a;
+  background: #1a2a1f;
+}
+
+.q1-card:focus-visible {
+  outline: 3px solid var(--s-amber);
+  outline-offset: 3px;
+}
+
+.q1-card[aria-pressed="true"] {
+  border-color: var(--s-amber);
+  background: #272315;
+  box-shadow: inset 3px 0 0 var(--s-amber);
+}
+
+.q1-card[aria-pressed="true"] .q1-number {
+  background: var(--s-amber);
+  color: #1a1504;
+  border-color: var(--s-amber);
+}
+
+.q1-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #4d6e55;
+  background: #1a2d21;
+  font: 600 .72em Consolas, monospace;
+  color: var(--s-muted);
+  flex-shrink: 0;
+  transition: background .18s, color .18s, border-color .18s;
+}
+
+.q1-text {
+  font-size: .92em;
+  line-height: 1.55;
+}
+
+/* ── Free-text alternative ── */
+.q1-free {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.q1-free-label {
+  font-size: .76em;
+  color: var(--s-muted);
+  letter-spacing: .04em;
+}
+
+.q1-free-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.q1-free-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border: 1.5px solid var(--s-line);
+  border-radius: 10px;
+  background: #0c1a15;
+  color: var(--s-ink);
+  font: inherit;
+  font-size: .88em;
+  transition: border-color .15s;
+}
+
+.q1-free-row input:focus {
+  border-color: var(--s-amber);
+  outline: none;
+}
+
+.q1-free-row input::placeholder {
+  color: #6e8a76;
+}
+
+.seminar .q1-free-confirm {
+  padding: 10px 18px;
+  font-size: .8em;
+  white-space: nowrap;
+  border-color: #5a5030;
+  background: #1e1c0f;
+  color: var(--s-amber);
+}
+
+.seminar .q1-free-confirm:hover {
+  background: #2a2710;
+  border-color: var(--s-amber);
+}
+
+.seminar .q1-free-confirm:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+/* ── Right: confirmation + CTA ── */
+.q1-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.q1-confirmation {
+  border: 1.5px solid #5a4e28;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1c1b0e, #161e12);
+  padding: clamp(20px, 2vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 120px;
+  transition: border-color .2s;
+}
+
+.q1-confirmation.has-query {
+  border-color: var(--s-amber);
+}
+
+.q1-conf-label {
+  font-size: .63em;
+  letter-spacing: .13em;
+  color: var(--s-amber);
+  line-height: 1.5;
+}
+
+.q1-conf-empty {
+  font-size: .88em;
+  color: #6e8a76;
+  line-height: 1.5;
+}
+
+.q1-conf-text {
+  font-size: clamp(16px, 1.15vw, 22px);
+  line-height: 1.55;
+  color: var(--s-ink);
+  font-weight: 450;
+}
+
+.q1-conf-text::before {
+  content: "\201C";
+  color: var(--s-amber);
+  margin-right: 2px;
+}
+
+.q1-conf-text::after {
+  content: "\201D";
+  color: var(--s-amber);
+  margin-left: 2px;
+}
+
+/* Flow arrow indicator */
+.q1-flow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--s-muted);
+  font-size: .75em;
+}
+
+.q1-flow svg {
+  color: var(--s-amber);
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.seminar .q1-cta {
+  align-self: flex-end;
+  padding: 14px 28px;
+  font-size: 1em;
+  font-weight: 550;
+  background: var(--s-amber);
+  color: #1a1504;
+  border-color: var(--s-amber);
+  gap: 12px;
+  transition: background .15s, opacity .15s;
+}
+
+.seminar .q1-cta:hover {
+  background: #f7dfa8;
+}
+
+.seminar .q1-cta:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+  .q1-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .q1-right {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .q1-card {
+    grid-template-columns: 30px 1fr;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+  .q1-number {
+    width: 28px;
+    height: 28px;
+    font-size: .68em;
+  }
+  .q1-text {
+    font-size: .85em;
+  }
+  .q1-free-row {
+    flex-direction: column;
+  }
+  .seminar .q1-cta {
+    align-self: stretch;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Compact for short viewports */
+@media (min-width: 900px) and (max-height: 850px) {
+  .q1-card {
+    padding: 13px 16px;
+  }
+  .q1-confirmation {
+    padding: 16px 20px;
+    gap: 10px;
+    min-height: 90px;
+  }
+  .q1-right {
+    gap: 14px;
+    min-height: 220px;
+  }
+  .seminar .q1-cta {
+    padding: 11px 22px;
+    font-size: .92em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q1-card,
+  .q1-confirmation,
+  .q1-free-row input {
+    transition: none !important;
+  }
+}

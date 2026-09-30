@@ -1,0 +1,51 @@
+# Dependencies and generated files
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.vite/
+.vite-cache/
+*.tsbuildinfo
+*.log
+
+# Local models and execution environment
+.runtime/
+public/models/
+public/runtime/
+*.onnx
+*.gguf
+
+# Credentials and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+.npmrc
+
+# Local work files
+backups/
+tmp/
+temp/
+*.bak
+*.old
+*.orig
+*.tmp
+*~
+docs/validacao/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local recovery checkpoints
+.checkpoints/
+
+# Local dependency store and delivery archives
+.pnpm-store/
+Grupo-7-RAG-codigo-final.zip

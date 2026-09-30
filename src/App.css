@@ -1,0 +1,24 @@
+:root {
+  --ink: #eff7f3;
+  --muted: #91a69f;
+  --dim: #61766f;
+  --cyan: #69f0bd;
+  --blue: #9bc3b7;
+  --violet: #a78bfa;
+  --amber: #ffc667;
+  --green: #65e6a7;
+  --red: #ff7785;
+  --panel: rgba(12, 21, 19, .84);
+  --panel-solid: #0b1714;
+  --line: rgba(155, 195, 183, .18);
+  --soft-line: rgba(155, 195, 183, .1);
+  --heading: 'Inter', 'Segoe UI Variable Display', 'Aptos Display', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+}
+
+body { background: #050806; }
+button { border: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}

@@ -1,0 +1,3 @@
+# The Base deliberately mixes LF/CRLF and includes a UTF-8 BOM example.
+# Its raw bytes are fingerprinted; checkout must preserve the frozen fixtures.
+data/base/*.md -text
