@@ -79,7 +79,9 @@ O vídeo abaixo mostra o pipeline completo em funcionamento, desde a preparaçã
 
 [![Assistir à demonstração do pipeline](docs/images/00-01-base-visao-geral.png)](docs/media/demonstracao.mp4)
 
-**▶ Assistir à demonstração completa — 1min29s**
+**Demonstração completa — 1min29s**
+
+[Assistir à demonstração](docs/media/demonstracao.mp4) | [Baixar vídeo em MP4](https://raw.githubusercontent.com/ethanmoreeira/rag-pipeline-visualizer/main/docs/media/demonstracao.mp4)
 
 ## Pipeline passo a passo
 
@@ -614,7 +616,7 @@ O build gera os arquivos da interface. A execução completa depende também da 
 - **Resposta precisa de revisão:** RAG pode reduzir alucinações, mas o modelo ainda pode interpretar mal uma evidência. Validar um ID citado não valida todas as afirmações.
 - **Dependência de serviços:** a busca e a recuperação exigem Qdrant acessível; a geração exige o modelo e o servidor llama.cpp locais.
 - **Limites de entrada e desempenho:** encoder, janela de contexto, reserva de saída e recursos da máquina limitam o processamento. A velocidade observada não é garantida em outro computador.
-- **Instalação em clone novo:** a coerência entre manifesto, lockfile e permissões de build ainda precisa ser resolvida, conforme a seção de execução. Os testes realizados utilizaram o ambiente existente.
+- **Recursos locais não versionados:** a execução completa depende da correta preparação manual de configurações e artefatos externos que não acompanham o repositório, como o modelo Qwen GGUF, o ambiente llama.cpp, os arquivos locais do MiniLM, as credenciais do Qdrant e a capacidade de processamento da máquina.
 
 ## Referências
 
@@ -650,5 +652,5 @@ Os documentos são sínteses locais, e não cópias integrais dessas páginas. O
 
 ## Nota acadêmica sobre uso de IA
 
-Utilizei o **Codex, da OpenAI**, como apoio à organização, à redação e à revisão desta documentação, incluindo a conferência das explicações com o código e a preparação das imagens. Esse apoio não substitui a compreensão do projeto nem a conferência de suas fontes e resultados.
+Foram utilizadas ferramentas de IA da **OpenAI (ChatGPT GPT-5.6 Sol e Codex)** e do **Google (Gemini 3.1 Pro)** como apoio à organização, revisão técnica e documentação do projeto. As decisões de arquitetura, implementação, conteúdo e validação permaneceram sob responsabilidade dos integrantes.
 
